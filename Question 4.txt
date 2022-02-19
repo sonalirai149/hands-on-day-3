@@ -1,0 +1,22 @@
+abstract class Con{
+    void Con(){
+        System.out.println("This is a constructor of Abstract class");
+    }
+    abstract void a_method();
+    void a_nonmethod(){
+        System.out.println("This is a normal method of Abstract class");
+    }
+    
+}
+class A extends Con{
+    void a_method(){
+        System.out.println("This is Abstract Method");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+         Con c=new A();
+        c.a_method();
+        c.a_nonmethod();
+    }
+}

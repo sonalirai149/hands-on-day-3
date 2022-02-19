@@ -1,0 +1,29 @@
+abstract class Bank{
+    abstract void getbalance();
+}
+class BankA extends Bank{
+    void getbalance(){
+        System.out.println("$100 deposited in Bank_A");
+    }
+}
+class BankB extends Bank{
+    void getbalance(){
+        System.out.println("$150 deposited in Bank_B");
+    }
+}
+class BankC extends Bank{
+    void getbalance(){
+        System.out.println("$200 deposited in Bank_C");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Bank a=new BankA();
+        Bank b=new BankB();
+        Bank c=new BankC();
+        a.getbalance();
+        b.getbalance();
+        c.getbalance();
+        
+    }
+}

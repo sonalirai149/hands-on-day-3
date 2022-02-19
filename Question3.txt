@@ -1,0 +1,44 @@
+abstract class Marks{
+    abstract void getpercentage();
+}
+class A extends Marks{
+    int sub1_mark;
+    int sub2_mark;
+    int sub3_mark;
+   public void A(int sub1_mark,int sub2_mark,int sub3_mark){
+       this.sub1_mark=sub1_mark;
+       this.sub2_mark=sub2_mark;
+       this.sub3_mark=sub3_mark;
+    }
+    void getpercentage(){
+        int per=((sub1_mark+sub2_mark+sub3_mark)/300)*100;
+        System.out.println("Total percentage is : "+per+"%");
+    }
+    
+}
+class B extends Marks{
+    int sub1_mark;
+    int sub2_mark;
+    int sub3_mark;
+    int sub4_mark;
+    public void B(int sub1_mark,int sub2_mark,int sub3_mark,int sub4_mark){
+    this.sub1_mark=sub1_mark;
+       this.sub2_mark=sub2_mark;
+       this.sub3_mark=sub3_mark;
+       this.sub4_mark=sub4_mark;
+       
+    }
+    void getpercentage(){
+        int per=((sub1_mark+sub2_mark+sub3_mark+sub4_mark)/400)*100;
+        System.out.println("Total percentage is : "+per+"%");
+    }
+    
+}
+public class Main{
+    public static void main(String[] args){
+        Marks a=new A(40,60,40);
+        Marks b=new B(90,80,100,60);
+        a.getpercentage();
+        b.getpercentage();
+    }
+}
